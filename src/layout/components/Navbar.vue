@@ -2,8 +2,10 @@
   <div class="navbar">
     <hamburger id="hamburger-container" :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
 
+    <!-- 面包屑导航 -->
     <breadcrumb id="breadcrumb-container" class="breadcrumb-container" />
 
+    <!-- 右边的菜单 -->
     <div class="right-menu">
       <template v-if="device!=='mobile'">
         <search id="header-search" class="right-menu-item" />

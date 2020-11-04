@@ -15,14 +15,15 @@ export default {
     }
   },
   computed: {
+    // 是否是外链
     isExternal() {
       return isExternal(this.to)
     },
     type() {
-      if (this.isExternal) {
+      if (this.isExternal) { // 外链则a标签,点击则打开新链接
         return 'a'
       }
-      return 'router-link'
+      return 'router-link' //
     }
   },
   methods: {

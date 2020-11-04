@@ -24,7 +24,7 @@ module.exports = {
    * In most cases please use '/' !!!
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
-  publicPath: '/',
+  publicPath: '.', // 打包之前修改为 '.'
   outputDir: 'dist',
   assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',
@@ -36,6 +36,18 @@ module.exports = {
       warnings: false,
       errors: true
     },
+    // proxy: {
+    //   // change xxx-api/login => mock/login
+    //   // detail: https://cli.vuejs.org/config/#devserver-proxy
+    //   [process.env.VUE_APP_BASE_API]: {
+    //     target: `http://127.0.0.1:${port}/mock`,
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       ['^' + process.env.VUE_APP_BASE_API]: ''
+    //     }
+    //   }
+    // },
+    // after: require('./mock/mock-server.js'),
     before: require('./mock/mock-server.js')
   },
   configureWebpack: {
@@ -80,6 +92,11 @@ module.exports = {
         symbolId: 'icon-[name]'
       })
       .end()
+
+    config
+      .when(process.env.NODE_ENV === 'development',
+        config => config.devtool('source-map') 
+      )
 
     config
       .when(process.env.NODE_ENV !== 'development',
