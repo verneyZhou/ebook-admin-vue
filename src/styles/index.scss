@@ -5,6 +5,9 @@
 @import './sidebar.scss';
 @import './btn.scss';
 
+@import './commons/index.scss';
+@import '//at.alicdn.com/t/font_1742077_61kn9ba91jy.css'; // cdn引入font-class
+
 body {
   height: 100%;
   -moz-osx-font-smoothing: grayscale;

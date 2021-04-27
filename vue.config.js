@@ -48,7 +48,8 @@ module.exports = {
     //   }
     // },
     // after: require('./mock/mock-server.js'),
-    before: require('./mock/mock-server.js')
+    before: require('./mock/mock-server.js'),
+    disableHostCheck: true // 解决代理域名报错
   },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that

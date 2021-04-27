@@ -124,19 +124,46 @@ export const asyncRoutes = [
     ]
   },
   {
-    path: '/resource',
+    path: '/icon-font',
     component: Layout,
-    redirect: '/resource/list',
+    redirect: '/icon-font/icon',
     meta: {
-      title: '资源管理',
+      title: 'IconFont',
       icon: 'documentation',
       roles: ['editor']
     },
     children: [
       {
-        path: '/resource/list',
-        component: () => import('@/views/book/create'),
-        meta: { title: '资源列表', icon: 'edit', roles: ['qa'] }
+        path: '/icon-font/icon',
+        component: () => import('@/views/icon-font/icon'),
+        meta: { title: 'icon列表', icon: 'edit', roles: ['qa'] }
+      },
+      {
+        path: '/icon-font/font',
+        component: () => import('@/views/icon-font/font'),
+        meta: { title: 'font列表', icon: 'edit', roles: ['qa'] }
+      }
+    ]
+  },
+  {
+    path: '/echarts',
+    component: Layout,
+    redirect: '/echarts/index',
+    meta: {
+      title: 'Echart',
+      icon: 'documentation',
+      roles: ['editor']
+    },
+    children: [
+      {
+        path: '/echarts/index',
+        component: () => import('@/views/echarts/index'),
+        meta: { title: '折线图', icon: 'edit', roles: ['qa'] }
+      },
+      {
+        path: '/echarts/circle',
+        component: () => import('@/views/echarts/circle'),
+        meta: { title: '饼状图', icon: 'edit', roles: ['qa'] }
       }
     ]
   },

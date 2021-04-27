@@ -1,0 +1,16 @@
+
+
+// Internet Explorer 9, Firefox, Opera,Chrome, 和 Safari支持@font-face 规则.
+// 但是, Internet Explorer 9 只支持 .eot 类型的字体, Firefox, Chrome, Safari, 和 Opera 支持 .ttf 与.otf 两种类型字体.
+// 注意： Internet Explorer 8 及更早IE版本不支持@font-face 规则.
+
+// 阿里云 iconfont
+@font-face {
+    font-family: 'iconfont';  /* project id 1742077 */
+    src: url('//at.alicdn.com/t/font_1742077_61kn9ba91jy.eot');
+    src: url('//at.alicdn.com/t/font_1742077_61kn9ba91jy.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_1742077_61kn9ba91jy.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_1742077_61kn9ba91jy.woff') format('woff'),
+    url('//at.alicdn.com/t/font_1742077_61kn9ba91jy.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_1742077_61kn9ba91jy.svg#iconfont') format('svg');
+}
